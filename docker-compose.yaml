@@ -14,8 +14,8 @@ services:
     stdin_open: true
     tty: true
     command:
-      - "-checktime=false",
-      - "-cache",
-      - "https://dn42.burble.com/roa/dn42_roa_46.json",
-      - "-bind",
+      - "-checktime=false"
+      - "-cache"
+      - "https://dn42.burble.com/roa/dn42_roa_46.json"
+      - "-bind"
       - ":8082"

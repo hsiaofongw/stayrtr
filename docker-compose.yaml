@@ -1,0 +1,21 @@
+networks:
+  dn42:
+    external: true
+services:
+  stayrtr:
+    image: mystayrtr:latest
+    build:
+      context: .
+      target: stayrtr
+    container_name: stayrtr
+    hostname: stayrtr
+    networks:
+      - dn42
+    stdin_open: true
+    tty: true
+    command:
+      - "-checktime=false",
+      - "-cache",
+      - "https://dn42.burble.com/roa/dn42_roa_46.json",
+      - "-bind",
+      - ":8082"

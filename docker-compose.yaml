@@ -1,5 +1,5 @@
 networks:
-  dn42:
+  roa:
     external: true
 services:
   stayrtr:
@@ -10,7 +10,7 @@ services:
     container_name: stayrtr
     hostname: stayrtr
     networks:
-      - dn42
+      - roa
     stdin_open: true
     tty: true
     command:
